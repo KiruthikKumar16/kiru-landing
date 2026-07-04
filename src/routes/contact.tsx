@@ -85,7 +85,7 @@ function ContactDetails() {
           </div>
 
           <div className="space-y-5 text-sm text-cream/80">
-            <p className="font-medium">info@koenigsegg.com</p>
+            <p className="font-medium">info@kiru.com</p>
             <p>T: +46 31-45 44 60</p>
           </div>
         </div>
