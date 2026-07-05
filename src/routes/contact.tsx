@@ -63,7 +63,9 @@ function Hero() {
 
           <div className="max-w-[56rem] text-sm uppercase tracking-[0.24em] text-cream/90 sm:text-base">
             <p className="mb-4 text-cream/90 font-semibold leading-[1.2]">
-              <span className="block whitespace-nowrap">YOU ARE WELCOME TO CONTACT US WITH GENERAL INQUIRIES</span>
+              <span className="block whitespace-nowrap">
+                YOU ARE WELCOME TO CONTACT US WITH GENERAL INQUIRIES
+              </span>
             </p>
             <p className="text-cream/90 font-semibold">THROUGH THE CHANNELS BELOW.</p>
           </div>
@@ -93,5 +95,3 @@ function ContactDetails() {
     </section>
   );
 }
-
-

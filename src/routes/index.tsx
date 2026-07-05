@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { PageFrame } from "../components/site-shell";
 
-
 export const Route = createFileRoute("/")({
   component: KiruLanding,
 });
@@ -97,18 +96,20 @@ function Hero() {
           <p className="mb-5 text-xs font-medium uppercase tracking-[0.32em] text-cream/80">
             The AI Travel Stylist
           </p>
-          <h1 className="font-display hero-heading" style={{ fontSize: 'clamp(60px, 12vw, 160px)', lineHeight: '0.95' }}>
+          <h1
+            className="font-display hero-heading"
+            style={{ fontSize: "clamp(60px, 12vw, 160px)", lineHeight: "0.95" }}
+          >
             Pack Smarter,
             <br />
             <em className="font-normal italic">Dress Better.</em>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-cream/80 md:text-xl">
-            Kiru studies your wardrobe, your destination, the weather, and the
-            culture — then curates outfits worth the journey.
+            Kiru studies your wardrobe, your destination, the weather, and the culture — then
+            curates outfits worth the journey.
           </p>
         </div>
       </div>
-
     </section>
   );
 }
@@ -167,9 +168,7 @@ function FeatureCarousel() {
                 }}
                 type="button"
                 className={`relative shrink-0 pb-4 text-sm font-medium tracking-tight transition-colors md:text-base cursor-pointer ${
-                  i === active
-                    ? "text-cream"
-                    : "text-cream/50 hover:text-cream/80"
+                  i === active ? "text-cream" : "text-cream/50 hover:text-cream/80"
                 }`}
               >
                 {f.title}
@@ -208,12 +207,9 @@ function FeatureCarousel() {
           </a>
         </div>
       </div>
-
-
     </section>
   );
 }
-
 
 type AltSection = {
   id: string;
@@ -264,16 +260,9 @@ function AlternatingSections() {
   return (
     <div className="bg-background">
       {ALT.map((s) => (
-        <section
-          key={s.id}
-          id={s.id}
-          className="border-t border-border/60 py-24 md:py-32"
-        >
+        <section key={s.id} id={s.id} className="border-t border-border/60 py-24 md:py-32">
           <div className="mx-auto grid max-w-[1600px] items-center gap-14 px-6 md:grid-cols-2 md:gap-20 md:px-10">
-            <div
-              data-reveal
-              className={`reveal ${s.reverse ? "md:order-2" : ""}`}
-            >
+            <div data-reveal className={`reveal ${s.reverse ? "md:order-2" : ""}`}>
               <div className="overflow-hidden rounded-2xl">
                 <img
                   src={s.image}
@@ -283,16 +272,11 @@ function AlternatingSections() {
                 />
               </div>
             </div>
-            <div
-              data-reveal
-              className={`reveal ${s.reverse ? "md:order-1 md:pr-8" : "md:pl-8"}`}
-            >
+            <div data-reveal className={`reveal ${s.reverse ? "md:order-1 md:pr-8" : "md:pl-8"}`}>
               <p className="mb-4 text-xs font-medium uppercase tracking-[0.28em] text-terracotta">
                 {s.eyebrow}
               </p>
-              <h2 className="font-display section-heading">
-                {s.title}
-              </h2>
+              <h2 className="font-display section-heading">{s.title}</h2>
               <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground md:text-xl">
                 {s.body}
               </p>
@@ -330,7 +314,9 @@ function ClosingBanner() {
             </h2>
             <p className="mt-8 text-lg leading-8 text-cream/75 md:text-xl">
               <br />
-              Whether you're heading to snowy mountains, tropical beaches, or bustling cities, Kiru creates travel outfits based on your wardrobe, destination, weather, and personal style—so you're prepared for every moment.
+              Whether you're heading to snowy mountains, tropical beaches, or bustling cities, Kiru
+              creates travel outfits based on your wardrobe, destination, weather, and personal
+              style—so you're prepared for every moment.
             </p>
           </div>
           <div className="flex items-start justify-end">
@@ -347,5 +333,3 @@ function ClosingBanner() {
     </section>
   );
 }
-
-
