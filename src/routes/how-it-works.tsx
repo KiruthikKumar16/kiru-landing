@@ -93,17 +93,26 @@ function Hero() {
 
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 md:px-16 md:pb-32">
         <div data-reveal className="reveal max-w-3xl text-white">
-          <h1 className="font-display hero-heading" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)', lineHeight: '1.05', whiteSpace: 'nowrap', fontWeight: 500 }}>
+          <h1
+            className="font-display hero-heading"
+            style={{
+              fontSize: "clamp(24px, 3.5vw, 44px)",
+              lineHeight: "1.05",
+              whiteSpace: "nowrap",
+              fontWeight: 500,
+            }}
+          >
             From&nbsp;closet
             <br />
             To&nbsp;destination
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
-            From your first trip to your hundredth, Kiru transforms the way you prepare for travel by combining your wardrobe, destination, and artificial intelligence into one seamless experience.
+            From your first trip to your hundredth, Kiru transforms the way you prepare for travel
+            by combining your wardrobe, destination, and artificial intelligence into one seamless
+            experience.
           </p>
         </div>
       </div>
-
     </section>
   );
 }
@@ -160,9 +169,7 @@ function FeatureCarousel() {
                 }}
                 type="button"
                 className={`relative shrink-0 pb-4 text-sm font-medium tracking-tight transition-colors md:text-base cursor-pointer ${
-                  i === active
-                    ? "text-cream"
-                    : "text-cream/50 hover:text-cream/80"
+                  i === active ? "text-cream" : "text-cream/50 hover:text-cream/80"
                 }`}
               >
                 {f.title}
@@ -206,7 +213,10 @@ function FeatureCarousel() {
 
 function OverviewSection() {
   return (
-    <section className="relative min-h-screen border-t border-border/60 bg-background py-24 md:py-32 flex items-center" id="overview">
+    <section
+      className="relative min-h-screen border-t border-border/60 bg-background py-24 md:py-32 flex items-center"
+      id="overview"
+    >
       <div className="mx-auto flex max-w-6xl px-6 md:px-10">
         <div className="grid w-full gap-12 md:grid-cols-[260px_minmax(0,1fr)] md:items-start">
           <div className="pt-4 md:pt-0">
@@ -216,11 +226,21 @@ function OverviewSection() {
           </div>
           <div className="space-y-8 pt-4 md:pt-0">
             <p className="text-lg leading-8 text-muted-foreground md:text-xl">
-                Every journey begins long before you leave home. From choosing what to wear to deciding what belongs in your suitcase, preparing for a trip often involves countless decisions that can feel overwhelming.            </p>
+              Every journey begins long before you leave home. From choosing what to wear to
+              deciding what belongs in your suitcase, preparing for a trip often involves countless
+              decisions that can feel overwhelming.{" "}
+            </p>
             <p className="text-lg leading-8 text-muted-foreground md:text-xl">
-                Kiru simplifies that process by combining your wardrobe, destination, weather forecasts, travel itinerary, and personal style into one intelligent system. Every recommendation is tailored specifically to you, helping eliminate the guesswork from packing.            </p>
+              Kiru simplifies that process by combining your wardrobe, destination, weather
+              forecasts, travel itinerary, and personal style into one intelligent system. Every
+              recommendation is tailored specifically to you, helping eliminate the guesswork from
+              packing.{" "}
+            </p>
             <p className="text-lg leading-8 text-muted-foreground md:text-xl">
-                From building your digital wardrobe to receiving daily outfit suggestions and smart packing lists, every step is designed to make travel preparation effortless—so you can spend less time planning and more time enjoying the journey.            </p>
+              From building your digital wardrobe to receiving daily outfit suggestions and smart
+              packing lists, every step is designed to make travel preparation effortless—so you can
+              spend less time planning and more time enjoying the journey.{" "}
+            </p>
           </div>
         </div>
       </div>
@@ -284,7 +304,10 @@ const FEATURE_CARDS = [
 
 function FeatureGrid() {
   return (
-    <section className="border-t border-border/60 bg-background py-24 md:py-32 px-6 md:px-10" id="feature-grid">
+    <section
+      className="border-t border-border/60 bg-background py-24 md:py-32 px-6 md:px-10"
+      id="feature-grid"
+    >
       <div className="space-y-24 w-full">
         <div className="w-full">
           <h3
@@ -294,16 +317,18 @@ function FeatureGrid() {
             Behind Every Recommendation
           </h3>
           <p className="mt-4 max-w-3xl text-lg leading-8 text-muted-foreground md:text-xl">
-            Every outfit Kiru suggests is the result of a carefully designed process that combines your wardrobe, destination, weather, and personal style into one seamless travel experience.
+            Every outfit Kiru suggests is the result of a carefully designed process that combines
+            your wardrobe, destination, weather, and personal style into one seamless travel
+            experience.
           </p>
         </div>
         <div className="grid w-full gap-8 sm:grid-cols-2">
-            {FEATURE_CARDS.map((card) => (
-              <div
-                key={card.title}
-                data-reveal
-                className="reveal feature-card relative overflow-hidden border border-white/10 bg-charcoal/10 shadow-[0_30px_90px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-cream/40"
-              >
+          {FEATURE_CARDS.map((card) => (
+            <div
+              key={card.title}
+              data-reveal
+              className="reveal feature-card relative overflow-hidden border border-white/10 bg-charcoal/10 shadow-[0_30px_90px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-cream/40"
+            >
               <div className="absolute inset-0 overflow-hidden">
                 <img
                   src={card.image}
@@ -349,7 +374,9 @@ function ClosingBanner() {
             </h2>
             <p className="mt-8 text-lg leading-8 text-cream/75 md:text-xl">
               <br />
-              Whether you're heading to snowy mountains, tropical beaches, or bustling cities, Kiru creates travel outfits based on your wardrobe, destination, weather, and personal style—so you're prepared for every moment.
+              Whether you're heading to snowy mountains, tropical beaches, or bustling cities, Kiru
+              creates travel outfits based on your wardrobe, destination, weather, and personal
+              style—so you're prepared for every moment.
             </p>
           </div>
           <div className="flex items-start justify-end">
@@ -366,5 +393,3 @@ function ClosingBanner() {
     </section>
   );
 }
-
-

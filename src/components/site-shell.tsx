@@ -21,11 +21,7 @@ const DEFAULT_MENU_BG_IMAGES = [
 
 const DEFAULT_SECONDARY_LINKS: PageNavItem[] = [];
 
-export function PageFrame({
-  children,
-  navItems = [],
-  homeHref = "/",
-}: PageFrameProps) {
+export function PageFrame({ children, navItems = [], homeHref = "/" }: PageFrameProps) {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
@@ -98,7 +94,14 @@ export function PageFrame({
                   : "text-foreground hover:text-terracotta"
             }`}
           >
-            <svg className="h-10 w-10 md:h-12 md:w-12" viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+            <svg
+              className="h-10 w-10 md:h-12 md:w-12"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+            >
               <line
                 x1="6"
                 y1="10"
@@ -152,25 +155,34 @@ export function PageFrame({
                   { label: "Contact", href: "/contact" },
                 ]}
               />
-              <FooterCol
-                title="Legal"
-                items={[
-                  { label: "Privacy Policy", href: "/contact" },
-                ]}
-              />
+              <FooterCol title="Legal" items={[{ label: "Privacy Policy", href: "/contact" }]} />
             </div>
           </div>
 
           <div className="mt-20 flex flex-col-reverse items-start justify-between gap-6 border-t border-cream/15 pt-8 md:flex-row md:items-center">
-            <p className="text-xs text-cream/50">© {new Date().getFullYear()} Kiru Studio. All rights reserved.</p>
+            <p className="text-xs text-cream/50">
+              © {new Date().getFullYear()} Kiru Studio. All rights reserved.
+            </p>
             <div className="flex items-center gap-5 text-cream/70">
-              <a href="#" aria-label="Instagram" className="transition-all hover:text-cream hover:underline underline-offset-2">
+              <a
+                href="#"
+                aria-label="Instagram"
+                className="transition-all hover:text-cream hover:underline underline-offset-2"
+              >
                 <Instagram className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="Twitter" className="transition-all hover:text-cream hover:underline underline-offset-2">
+              <a
+                href="#"
+                aria-label="Twitter"
+                className="transition-all hover:text-cream hover:underline underline-offset-2"
+              >
                 <Twitter className="h-4 w-4" />
               </a>
-              <a href="#" aria-label="YouTube" className="transition-all hover:text-cream hover:underline underline-offset-2">
+              <a
+                href="#"
+                aria-label="YouTube"
+                className="transition-all hover:text-cream hover:underline underline-offset-2"
+              >
                 <Youtube className="h-4 w-4" />
               </a>
             </div>
@@ -198,7 +210,10 @@ function FooterCol({ title, items }: FooterColProps) {
       <ul className="mt-5 space-y-3 text-sm text-cream/70">
         {items.map((item) => (
           <li key={item.label}>
-            <a href={item.href} className="transition-all hover:text-cream hover:underline underline-offset-2">
+            <a
+              href={item.href}
+              className="transition-all hover:text-cream hover:underline underline-offset-2"
+            >
               {item.label}
             </a>
           </li>
@@ -250,25 +265,48 @@ function MenuOverlay({ open, onClose, navItems }: MenuOverlayProps) {
             </ul>
           </nav>
 
-          <div className={`grid grid-cols-2 gap-x-8 gap-y-4 border-t border-cream/20 pt-8 text-base transition-all duration-700 md:border-t-0 md:pt-0 ${open ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`} style={{ transitionDelay: open ? "600ms" : "0ms" }}>
+          <div
+            className={`grid grid-cols-2 gap-x-8 gap-y-4 border-t border-cream/20 pt-8 text-base transition-all duration-700 md:border-t-0 md:pt-0 ${open ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"}`}
+            style={{ transitionDelay: open ? "600ms" : "0ms" }}
+          >
             {DEFAULT_SECONDARY_LINKS.map((s) => (
-              <a key={s.label} href={s.href} onClick={onClose} className="text-cream/85 hover:text-terracotta">
+              <a
+                key={s.label}
+                href={s.href}
+                onClick={onClose}
+                className="text-cream/85 hover:text-terracotta"
+              >
                 {s.label}
               </a>
             ))}
           </div>
         </div>
 
-        <div className={`mt-14 flex flex-col-reverse items-start justify-between gap-4 border-t border-cream/15 pt-6 text-xs uppercase tracking-[0.24em] text-cream/50 transition-all duration-700 md:flex-row md:items-center ${open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`} style={{ transitionDelay: open ? "780ms" : "0ms" }}>
+        <div
+          className={`mt-14 flex flex-col-reverse items-start justify-between gap-4 border-t border-cream/15 pt-6 text-xs uppercase tracking-[0.24em] text-cream/50 transition-all duration-700 md:flex-row md:items-center ${open ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}
+          style={{ transitionDelay: open ? "780ms" : "0ms" }}
+        >
           <span>© {new Date().getFullYear()} Kiru Studio</span>
           <div className="flex items-center gap-5 text-cream/70">
-            <a href="#" aria-label="Instagram" className="transition-all hover:text-cream hover:underline underline-offset-2">
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="transition-all hover:text-cream hover:underline underline-offset-2"
+            >
               <Instagram className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="Twitter" className="transition-all hover:text-cream hover:underline underline-offset-2">
+            <a
+              href="#"
+              aria-label="Twitter"
+              className="transition-all hover:text-cream hover:underline underline-offset-2"
+            >
               <Twitter className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="YouTube" className="transition-all hover:text-cream hover:underline underline-offset-2">
+            <a
+              href="#"
+              aria-label="YouTube"
+              className="transition-all hover:text-cream hover:underline underline-offset-2"
+            >
               <Youtube className="h-4 w-4" />
             </a>
           </div>

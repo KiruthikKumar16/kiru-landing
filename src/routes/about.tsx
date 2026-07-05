@@ -79,14 +79,13 @@ function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.12),transparent_38%)]" />
       <div className="relative mx-auto flex min-h-screen max-w-[1600px] flex-col justify-center px-6 py-28 md:px-16 md:py-36">
         <div className="max-w-4xl space-y-8" data-reveal>
-          <p className="text-xs font-medium uppercase tracking-[0.3em] text-cream/70">
-            ABOUT KIRU
-          </p>
+          <p className="text-xs font-medium uppercase tracking-[0.3em] text-cream/70">ABOUT KIRU</p>
           <h1 className="font-display text-[clamp(2.75rem,7vw,5.4rem)] leading-[0.95] tracking-[-0.03em]">
             Designed for Every Journey
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-cream/80 md:text-xl">
-            Helping travelers pack smarter, dress confidently, and explore the world through intelligent technology.
+            Helping travelers pack smarter, dress confidently, and explore the world through
+            intelligent technology.
           </p>
         </div>
       </div>
@@ -156,9 +155,7 @@ function Narrative() {
                 <span>{principle.title}</span>
                 <span className="font-display text-3xl text-cream/40">0{index + 1}</span>
               </div>
-              <p className="mt-6 max-w-2xl text-base leading-8 text-cream/80">
-                {principle.copy}
-              </p>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-cream/80">{principle.copy}</p>
             </div>
           ))}
         </div>
@@ -234,5 +231,3 @@ function Narrative() {
     </main>
   );
 }
-
-
