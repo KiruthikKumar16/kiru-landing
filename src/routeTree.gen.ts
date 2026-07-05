@@ -9,12 +9,78 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as WeatherIntelligenceRouteImport } from './routes/weather-intelligence'
+import { Route as WardrobeAnalysisRouteImport } from './routes/wardrobe-analysis'
+import { Route as TripPlanningRouteImport } from './routes/trip-planning'
+import { Route as TripPlannerRouteImport } from './routes/trip-planner'
+import { Route as TravelAssistanceRouteImport } from './routes/travel-assistance'
+import { Route as SmartPackingRouteImport } from './routes/smart-packing'
+import { Route as ShoppingAssistantRouteImport } from './routes/shopping-assistant'
+import { Route as ProfileSetupRouteImport } from './routes/profile-setup'
+import { Route as PackingOptimizationRouteImport } from './routes/packing-optimization'
+import { Route as OutfitGenerationRouteImport } from './routes/outfit-generation'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
 import { Route as FeaturesRouteImport } from './routes/features'
+import { Route as DigitalWardrobeRouteImport } from './routes/digital-wardrobe'
+import { Route as DestinationIntelligenceRouteImport } from './routes/destination-intelligence'
+import { Route as CulturalGuidanceRouteImport } from './routes/cultural-guidance'
+import { Route as ContinuousLearningRouteImport } from './routes/continuous-learning'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CommunityFeedRouteImport } from './routes/community-feed'
+import { Route as AiStylistRouteImport } from './routes/ai-stylist'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const WeatherIntelligenceRoute = WeatherIntelligenceRouteImport.update({
+  id: '/weather-intelligence',
+  path: '/weather-intelligence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WardrobeAnalysisRoute = WardrobeAnalysisRouteImport.update({
+  id: '/wardrobe-analysis',
+  path: '/wardrobe-analysis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TripPlanningRoute = TripPlanningRouteImport.update({
+  id: '/trip-planning',
+  path: '/trip-planning',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TripPlannerRoute = TripPlannerRouteImport.update({
+  id: '/trip-planner',
+  path: '/trip-planner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TravelAssistanceRoute = TravelAssistanceRouteImport.update({
+  id: '/travel-assistance',
+  path: '/travel-assistance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SmartPackingRoute = SmartPackingRouteImport.update({
+  id: '/smart-packing',
+  path: '/smart-packing',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ShoppingAssistantRoute = ShoppingAssistantRouteImport.update({
+  id: '/shopping-assistant',
+  path: '/shopping-assistant',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProfileSetupRoute = ProfileSetupRouteImport.update({
+  id: '/profile-setup',
+  path: '/profile-setup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackingOptimizationRoute = PackingOptimizationRouteImport.update({
+  id: '/packing-optimization',
+  path: '/packing-optimization',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OutfitGenerationRoute = OutfitGenerationRouteImport.update({
+  id: '/outfit-generation',
+  path: '/outfit-generation',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const HowItWorksRoute = HowItWorksRouteImport.update({
   id: '/how-it-works',
   path: '/how-it-works',
@@ -25,9 +91,39 @@ const FeaturesRoute = FeaturesRouteImport.update({
   path: '/features',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DigitalWardrobeRoute = DigitalWardrobeRouteImport.update({
+  id: '/digital-wardrobe',
+  path: '/digital-wardrobe',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DestinationIntelligenceRoute = DestinationIntelligenceRouteImport.update({
+  id: '/destination-intelligence',
+  path: '/destination-intelligence',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CulturalGuidanceRoute = CulturalGuidanceRouteImport.update({
+  id: '/cultural-guidance',
+  path: '/cultural-guidance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContinuousLearningRoute = ContinuousLearningRouteImport.update({
+  id: '/continuous-learning',
+  path: '/continuous-learning',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CommunityFeedRoute = CommunityFeedRouteImport.update({
+  id: '/community-feed',
+  path: '/community-feed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiStylistRoute = AiStylistRouteImport.update({
+  id: '/ai-stylist',
+  path: '/ai-stylist',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -44,43 +140,241 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ai-stylist': typeof AiStylistRoute
+  '/community-feed': typeof CommunityFeedRoute
   '/contact': typeof ContactRoute
+  '/continuous-learning': typeof ContinuousLearningRoute
+  '/cultural-guidance': typeof CulturalGuidanceRoute
+  '/destination-intelligence': typeof DestinationIntelligenceRoute
+  '/digital-wardrobe': typeof DigitalWardrobeRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/outfit-generation': typeof OutfitGenerationRoute
+  '/packing-optimization': typeof PackingOptimizationRoute
+  '/profile-setup': typeof ProfileSetupRoute
+  '/shopping-assistant': typeof ShoppingAssistantRoute
+  '/smart-packing': typeof SmartPackingRoute
+  '/travel-assistance': typeof TravelAssistanceRoute
+  '/trip-planner': typeof TripPlannerRoute
+  '/trip-planning': typeof TripPlanningRoute
+  '/wardrobe-analysis': typeof WardrobeAnalysisRoute
+  '/weather-intelligence': typeof WeatherIntelligenceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ai-stylist': typeof AiStylistRoute
+  '/community-feed': typeof CommunityFeedRoute
   '/contact': typeof ContactRoute
+  '/continuous-learning': typeof ContinuousLearningRoute
+  '/cultural-guidance': typeof CulturalGuidanceRoute
+  '/destination-intelligence': typeof DestinationIntelligenceRoute
+  '/digital-wardrobe': typeof DigitalWardrobeRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/outfit-generation': typeof OutfitGenerationRoute
+  '/packing-optimization': typeof PackingOptimizationRoute
+  '/profile-setup': typeof ProfileSetupRoute
+  '/shopping-assistant': typeof ShoppingAssistantRoute
+  '/smart-packing': typeof SmartPackingRoute
+  '/travel-assistance': typeof TravelAssistanceRoute
+  '/trip-planner': typeof TripPlannerRoute
+  '/trip-planning': typeof TripPlanningRoute
+  '/wardrobe-analysis': typeof WardrobeAnalysisRoute
+  '/weather-intelligence': typeof WeatherIntelligenceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/ai-stylist': typeof AiStylistRoute
+  '/community-feed': typeof CommunityFeedRoute
   '/contact': typeof ContactRoute
+  '/continuous-learning': typeof ContinuousLearningRoute
+  '/cultural-guidance': typeof CulturalGuidanceRoute
+  '/destination-intelligence': typeof DestinationIntelligenceRoute
+  '/digital-wardrobe': typeof DigitalWardrobeRoute
   '/features': typeof FeaturesRoute
   '/how-it-works': typeof HowItWorksRoute
+  '/outfit-generation': typeof OutfitGenerationRoute
+  '/packing-optimization': typeof PackingOptimizationRoute
+  '/profile-setup': typeof ProfileSetupRoute
+  '/shopping-assistant': typeof ShoppingAssistantRoute
+  '/smart-packing': typeof SmartPackingRoute
+  '/travel-assistance': typeof TravelAssistanceRoute
+  '/trip-planner': typeof TripPlannerRoute
+  '/trip-planning': typeof TripPlanningRoute
+  '/wardrobe-analysis': typeof WardrobeAnalysisRoute
+  '/weather-intelligence': typeof WeatherIntelligenceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/features' | '/how-it-works'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/ai-stylist'
+    | '/community-feed'
+    | '/contact'
+    | '/continuous-learning'
+    | '/cultural-guidance'
+    | '/destination-intelligence'
+    | '/digital-wardrobe'
+    | '/features'
+    | '/how-it-works'
+    | '/outfit-generation'
+    | '/packing-optimization'
+    | '/profile-setup'
+    | '/shopping-assistant'
+    | '/smart-packing'
+    | '/travel-assistance'
+    | '/trip-planner'
+    | '/trip-planning'
+    | '/wardrobe-analysis'
+    | '/weather-intelligence'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/features' | '/how-it-works'
-  id: '__root__' | '/' | '/about' | '/contact' | '/features' | '/how-it-works'
+  to:
+    | '/'
+    | '/about'
+    | '/ai-stylist'
+    | '/community-feed'
+    | '/contact'
+    | '/continuous-learning'
+    | '/cultural-guidance'
+    | '/destination-intelligence'
+    | '/digital-wardrobe'
+    | '/features'
+    | '/how-it-works'
+    | '/outfit-generation'
+    | '/packing-optimization'
+    | '/profile-setup'
+    | '/shopping-assistant'
+    | '/smart-packing'
+    | '/travel-assistance'
+    | '/trip-planner'
+    | '/trip-planning'
+    | '/wardrobe-analysis'
+    | '/weather-intelligence'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/ai-stylist'
+    | '/community-feed'
+    | '/contact'
+    | '/continuous-learning'
+    | '/cultural-guidance'
+    | '/destination-intelligence'
+    | '/digital-wardrobe'
+    | '/features'
+    | '/how-it-works'
+    | '/outfit-generation'
+    | '/packing-optimization'
+    | '/profile-setup'
+    | '/shopping-assistant'
+    | '/smart-packing'
+    | '/travel-assistance'
+    | '/trip-planner'
+    | '/trip-planning'
+    | '/wardrobe-analysis'
+    | '/weather-intelligence'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  AiStylistRoute: typeof AiStylistRoute
+  CommunityFeedRoute: typeof CommunityFeedRoute
   ContactRoute: typeof ContactRoute
+  ContinuousLearningRoute: typeof ContinuousLearningRoute
+  CulturalGuidanceRoute: typeof CulturalGuidanceRoute
+  DestinationIntelligenceRoute: typeof DestinationIntelligenceRoute
+  DigitalWardrobeRoute: typeof DigitalWardrobeRoute
   FeaturesRoute: typeof FeaturesRoute
   HowItWorksRoute: typeof HowItWorksRoute
+  OutfitGenerationRoute: typeof OutfitGenerationRoute
+  PackingOptimizationRoute: typeof PackingOptimizationRoute
+  ProfileSetupRoute: typeof ProfileSetupRoute
+  ShoppingAssistantRoute: typeof ShoppingAssistantRoute
+  SmartPackingRoute: typeof SmartPackingRoute
+  TravelAssistanceRoute: typeof TravelAssistanceRoute
+  TripPlannerRoute: typeof TripPlannerRoute
+  TripPlanningRoute: typeof TripPlanningRoute
+  WardrobeAnalysisRoute: typeof WardrobeAnalysisRoute
+  WeatherIntelligenceRoute: typeof WeatherIntelligenceRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/weather-intelligence': {
+      id: '/weather-intelligence'
+      path: '/weather-intelligence'
+      fullPath: '/weather-intelligence'
+      preLoaderRoute: typeof WeatherIntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wardrobe-analysis': {
+      id: '/wardrobe-analysis'
+      path: '/wardrobe-analysis'
+      fullPath: '/wardrobe-analysis'
+      preLoaderRoute: typeof WardrobeAnalysisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trip-planning': {
+      id: '/trip-planning'
+      path: '/trip-planning'
+      fullPath: '/trip-planning'
+      preLoaderRoute: typeof TripPlanningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trip-planner': {
+      id: '/trip-planner'
+      path: '/trip-planner'
+      fullPath: '/trip-planner'
+      preLoaderRoute: typeof TripPlannerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/travel-assistance': {
+      id: '/travel-assistance'
+      path: '/travel-assistance'
+      fullPath: '/travel-assistance'
+      preLoaderRoute: typeof TravelAssistanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/smart-packing': {
+      id: '/smart-packing'
+      path: '/smart-packing'
+      fullPath: '/smart-packing'
+      preLoaderRoute: typeof SmartPackingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/shopping-assistant': {
+      id: '/shopping-assistant'
+      path: '/shopping-assistant'
+      fullPath: '/shopping-assistant'
+      preLoaderRoute: typeof ShoppingAssistantRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/profile-setup': {
+      id: '/profile-setup'
+      path: '/profile-setup'
+      fullPath: '/profile-setup'
+      preLoaderRoute: typeof ProfileSetupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packing-optimization': {
+      id: '/packing-optimization'
+      path: '/packing-optimization'
+      fullPath: '/packing-optimization'
+      preLoaderRoute: typeof PackingOptimizationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/outfit-generation': {
+      id: '/outfit-generation'
+      path: '/outfit-generation'
+      fullPath: '/outfit-generation'
+      preLoaderRoute: typeof OutfitGenerationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/how-it-works': {
       id: '/how-it-works'
       path: '/how-it-works'
@@ -95,11 +389,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof FeaturesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/digital-wardrobe': {
+      id: '/digital-wardrobe'
+      path: '/digital-wardrobe'
+      fullPath: '/digital-wardrobe'
+      preLoaderRoute: typeof DigitalWardrobeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/destination-intelligence': {
+      id: '/destination-intelligence'
+      path: '/destination-intelligence'
+      fullPath: '/destination-intelligence'
+      preLoaderRoute: typeof DestinationIntelligenceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cultural-guidance': {
+      id: '/cultural-guidance'
+      path: '/cultural-guidance'
+      fullPath: '/cultural-guidance'
+      preLoaderRoute: typeof CulturalGuidanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/continuous-learning': {
+      id: '/continuous-learning'
+      path: '/continuous-learning'
+      fullPath: '/continuous-learning'
+      preLoaderRoute: typeof ContinuousLearningRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/community-feed': {
+      id: '/community-feed'
+      path: '/community-feed'
+      fullPath: '/community-feed'
+      preLoaderRoute: typeof CommunityFeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-stylist': {
+      id: '/ai-stylist'
+      path: '/ai-stylist'
+      fullPath: '/ai-stylist'
+      preLoaderRoute: typeof AiStylistRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -122,9 +458,25 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  AiStylistRoute: AiStylistRoute,
+  CommunityFeedRoute: CommunityFeedRoute,
   ContactRoute: ContactRoute,
+  ContinuousLearningRoute: ContinuousLearningRoute,
+  CulturalGuidanceRoute: CulturalGuidanceRoute,
+  DestinationIntelligenceRoute: DestinationIntelligenceRoute,
+  DigitalWardrobeRoute: DigitalWardrobeRoute,
   FeaturesRoute: FeaturesRoute,
   HowItWorksRoute: HowItWorksRoute,
+  OutfitGenerationRoute: OutfitGenerationRoute,
+  PackingOptimizationRoute: PackingOptimizationRoute,
+  ProfileSetupRoute: ProfileSetupRoute,
+  ShoppingAssistantRoute: ShoppingAssistantRoute,
+  SmartPackingRoute: SmartPackingRoute,
+  TravelAssistanceRoute: TravelAssistanceRoute,
+  TripPlannerRoute: TripPlannerRoute,
+  TripPlanningRoute: TripPlanningRoute,
+  WardrobeAnalysisRoute: WardrobeAnalysisRoute,
+  WeatherIntelligenceRoute: WeatherIntelligenceRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

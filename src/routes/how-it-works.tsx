@@ -262,41 +262,49 @@ type AltSection = {
 const FEATURE_CARDS = [
   {
     title: "Profile Setup",
+    href: "/profile-setup",
     image:
       "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Wardrobe Analysis",
+    href: "/wardrobe-analysis",
     image:
       "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Trip Planning",
+    href: "/trip-planning",
     image:
       "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Destination Intelligence",
+    href: "/destination-intelligence",
     image:
       "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Outfit Generation",
+    href: "/outfit-generation",
     image:
       "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Packing Optimization",
+    href: "/packing-optimization",
     image:
       "https://images.unsplash.com/photo-1467043237213-65f2da53396f?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Travel Assistance",
+    href: "/travel-assistance",
     image:
       "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
   },
   {
     title: "Continuous Learning",
+    href: "/continuous-learning",
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80",
   },
@@ -324,8 +332,9 @@ function FeatureGrid() {
         </div>
         <div className="grid w-full gap-8 sm:grid-cols-2">
           {FEATURE_CARDS.map((card) => (
-            <div
+            <a
               key={card.title}
+              href={card.href}
               data-reveal
               className="reveal feature-card relative overflow-hidden border border-white/10 bg-charcoal/10 shadow-[0_30px_90px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-cream/40"
             >
@@ -346,7 +355,7 @@ function FeatureGrid() {
                   </h3>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
