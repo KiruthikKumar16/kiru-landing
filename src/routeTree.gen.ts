@@ -17,6 +17,7 @@ import { Route as TravelAssistanceRouteImport } from './routes/travel-assistance
 import { Route as SmartPackingRouteImport } from './routes/smart-packing'
 import { Route as ShoppingAssistantRouteImport } from './routes/shopping-assistant'
 import { Route as ProfileSetupRouteImport } from './routes/profile-setup'
+import { Route as PrivacyPolicyRouteImport } from './routes/privacy-policy'
 import { Route as PackingOptimizationRouteImport } from './routes/packing-optimization'
 import { Route as OutfitGenerationRouteImport } from './routes/outfit-generation'
 import { Route as HowItWorksRouteImport } from './routes/how-it-works'
@@ -69,6 +70,11 @@ const ShoppingAssistantRoute = ShoppingAssistantRouteImport.update({
 const ProfileSetupRoute = ProfileSetupRouteImport.update({
   id: '/profile-setup',
   path: '/profile-setup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyPolicyRoute = PrivacyPolicyRouteImport.update({
+  id: '/privacy-policy',
+  path: '/privacy-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PackingOptimizationRoute = PackingOptimizationRouteImport.update({
@@ -151,6 +157,7 @@ export interface FileRoutesByFullPath {
   '/how-it-works': typeof HowItWorksRoute
   '/outfit-generation': typeof OutfitGenerationRoute
   '/packing-optimization': typeof PackingOptimizationRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/profile-setup': typeof ProfileSetupRoute
   '/shopping-assistant': typeof ShoppingAssistantRoute
   '/smart-packing': typeof SmartPackingRoute
@@ -174,6 +181,7 @@ export interface FileRoutesByTo {
   '/how-it-works': typeof HowItWorksRoute
   '/outfit-generation': typeof OutfitGenerationRoute
   '/packing-optimization': typeof PackingOptimizationRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/profile-setup': typeof ProfileSetupRoute
   '/shopping-assistant': typeof ShoppingAssistantRoute
   '/smart-packing': typeof SmartPackingRoute
@@ -198,6 +206,7 @@ export interface FileRoutesById {
   '/how-it-works': typeof HowItWorksRoute
   '/outfit-generation': typeof OutfitGenerationRoute
   '/packing-optimization': typeof PackingOptimizationRoute
+  '/privacy-policy': typeof PrivacyPolicyRoute
   '/profile-setup': typeof ProfileSetupRoute
   '/shopping-assistant': typeof ShoppingAssistantRoute
   '/smart-packing': typeof SmartPackingRoute
@@ -223,6 +232,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/outfit-generation'
     | '/packing-optimization'
+    | '/privacy-policy'
     | '/profile-setup'
     | '/shopping-assistant'
     | '/smart-packing'
@@ -246,6 +256,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/outfit-generation'
     | '/packing-optimization'
+    | '/privacy-policy'
     | '/profile-setup'
     | '/shopping-assistant'
     | '/smart-packing'
@@ -269,6 +280,7 @@ export interface FileRouteTypes {
     | '/how-it-works'
     | '/outfit-generation'
     | '/packing-optimization'
+    | '/privacy-policy'
     | '/profile-setup'
     | '/shopping-assistant'
     | '/smart-packing'
@@ -293,6 +305,7 @@ export interface RootRouteChildren {
   HowItWorksRoute: typeof HowItWorksRoute
   OutfitGenerationRoute: typeof OutfitGenerationRoute
   PackingOptimizationRoute: typeof PackingOptimizationRoute
+  PrivacyPolicyRoute: typeof PrivacyPolicyRoute
   ProfileSetupRoute: typeof ProfileSetupRoute
   ShoppingAssistantRoute: typeof ShoppingAssistantRoute
   SmartPackingRoute: typeof SmartPackingRoute
@@ -359,6 +372,13 @@ declare module '@tanstack/react-router' {
       path: '/profile-setup'
       fullPath: '/profile-setup'
       preLoaderRoute: typeof ProfileSetupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy-policy': {
+      id: '/privacy-policy'
+      path: '/privacy-policy'
+      fullPath: '/privacy-policy'
+      preLoaderRoute: typeof PrivacyPolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/packing-optimization': {
@@ -469,6 +489,7 @@ const rootRouteChildren: RootRouteChildren = {
   HowItWorksRoute: HowItWorksRoute,
   OutfitGenerationRoute: OutfitGenerationRoute,
   PackingOptimizationRoute: PackingOptimizationRoute,
+  PrivacyPolicyRoute: PrivacyPolicyRoute,
   ProfileSetupRoute: ProfileSetupRoute,
   ShoppingAssistantRoute: ShoppingAssistantRoute,
   SmartPackingRoute: SmartPackingRoute,

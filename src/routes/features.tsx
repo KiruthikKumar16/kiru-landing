@@ -72,6 +72,15 @@ function useReveal() {
 
 function KiruLanding() {
   useReveal();
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const hash = window.location.hash.replace(/^#/, "");
+    if (!hash) return;
+    const el = document.getElementById(hash);
+    if (el) {
+      setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "center" }), 60);
+    }
+  }, []);
   return (
     <PageFrame navItems={NAV} homeHref="/">
       <Hero />
@@ -333,7 +342,19 @@ function FeatureGrid() {
             <a
               key={card.title}
               href={card.href}
+              id={card.href.replace(/^\//, "")}
               data-reveal
+              onClick={() => {
+                try {
+                  const slug = card.href.replace(/^\//, "");
+                  sessionStorage.setItem(
+                    "kiru:backTarget",
+                    JSON.stringify({ path: window.location.pathname, id: slug }),
+                  );
+                } catch (e) {
+                  /* ignore */
+                }
+              }}
               className="reveal feature-card relative overflow-hidden border border-white/10 bg-charcoal/10 shadow-[0_30px_90px_rgba(15,23,42,0.08)] transition-all duration-500 hover:-translate-y-1 hover:border-cream/40"
             >
               <div className="absolute inset-0 overflow-hidden">

@@ -127,7 +127,7 @@ const SLIDES = [
     caption:
       "Kiru considers weather, activities, culture, and local expectations before making recommendations.",
     image:
-      "https://images.unsplash.com/photo-1495121605193-b116b5b9c5c3?auto=format&fit=crop&w=1400&q=80",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80",
     alt: "Three complete outfits displayed side by side",
     bullets: ["Business", "Casual", "Vacation"],
   },

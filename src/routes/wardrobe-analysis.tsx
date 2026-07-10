@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { PageFrame } from "../components/site-shell";
 
 export const Route = createFileRoute("/wardrobe-analysis")({
-  component: CulturalGuidance,
+  component: WardrobeAnalysis,
 });
 
 const NAV = [
@@ -35,7 +35,7 @@ function useReveal() {
   }, []);
 }
 
-function CulturalGuidance() {
+function WardrobeAnalysis() {
   useReveal();
   return (
     <PageFrame navItems={NAV} homeHref="/">
@@ -51,7 +51,7 @@ function Hero() {
     <section id="top" className="relative h-[100svh] min-h-[560px] w-full overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1505765051532-9a6a6f6ed8d9?auto=format&fit=crop&w=2400&q=85"
-        alt="People walking in a colorful market"
+        alt="Wardrobe organization and clothing analysis"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/80" />
@@ -59,10 +59,10 @@ function Hero() {
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 md:px-16 md:pb-32">
         <div data-reveal className="reveal max-w-3xl text-white">
           <h1 className="font-display hero-heading mt-4" style={{ fontSize: 'clamp(30px, 5vw, 70px)', lineHeight: '0.95' }}>
-            Cultural Guidance
+            Wardrobe Analysis
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
-            Respect Every Destination.
+            Understanding What You Own.
           </p>
           <a
             href="/how-it-works"
@@ -81,56 +81,56 @@ const OVERVIEW_BLOCKS = [
   {
     title: "Overview",
     body:
-      "Travel is about discovering new places, embracing different cultures, and creating meaningful connections. Every destination has its own traditions, customs, and expectations, and the way we dress is often a reflection of that respect. Kiru's Cultural Guidance combines destination-specific insights with your wardrobe to recommend outfits that feel appropriate, comfortable, and authentic—helping you travel confidently while honoring the places you visit.",
+      "Every intelligent recommendation begins with understanding your wardrobe. Before Kiru can create outfits, generate packing lists, or prepare you for a destination, it first needs to know what already belongs in your closet. Wardrobe Analysis transforms individual garments into meaningful insights, allowing the system to understand not just what you own, but how each piece contributes to your personal style. Using advanced image recognition and intelligent categorization, Kiru analyzes clothing across multiple dimensions, creating a structured digital wardrobe that serves as the foundation for every recommendation. By understanding your collection in detail, Kiru helps you discover new combinations, maximize versatility, and make better use of the clothes you already own.",
   },
   {
-    title: "Local Awareness",
+    title: "AI-Powered Recognition",
     body:
-      "What feels perfectly appropriate in one country may be considered unsuitable in another. Kiru understands regional customs, religious traditions, local etiquette, and social expectations, ensuring every recommendation reflects the culture of your destination while remaining true to your personal style.",
+      "Building a digital wardrobe shouldn't feel like an administrative task. Kiru simplifies the process by allowing you to upload photos of your clothing, automatically identifying key garment attributes through artificial intelligence. Categories, colors, fabrics, patterns, sleeve lengths, and seasonal suitability are recognized within seconds, transforming simple images into meaningful wardrobe data. This intelligent recognition process removes the need for extensive manual input while ensuring your wardrobe remains accurate, organized, and ready for future recommendations. The result is a smarter and more effortless way to manage your clothing collection.",
   },
   {
-    title: "Style Without Compromise",
+    title: "Beyond Simple Organization",
     body:
-      "Respecting local customs doesn't mean sacrificing your individuality. Kiru carefully balances cultural considerations with your fashion preferences, creating outfits that feel natural, stylish, and appropriate for every setting. Whether visiting historic landmarks, places of worship, or modern city centers, every recommendation is designed to help you feel comfortable and confident.",
+      "Most wardrobe apps focus on storage. Kiru focuses on understanding. Every garment is automatically grouped by category, occasion, season, color palette, and compatibility, creating a wardrobe that feels structured and intuitive. Instead of searching endlessly through your closet, you gain instant access to the clothing best suited for specific destinations, activities, and weather conditions. As your collection grows, Kiru continues organizing and refining its understanding, ensuring your wardrobe remains accessible and useful regardless of its size. The goal is not simply to catalog clothing, but to create a system that supports better decisions every time you travel.",
   },
   {
-    title: "Travel with Confidence",
+    title: "The Foundation of Every Recommendation",
     body:
-      "Great travel experiences begin with understanding the world around us. Kiru provides thoughtful guidance before you arrive, helping you avoid common cultural mistakes while packing clothing that's suitable for every planned activity. By combining cultural intelligence with destination insights, every journey becomes more respectful, enjoyable, and memorable.",
+      "The quality of every recommendation depends on the quality of understanding behind it. By analyzing your wardrobe in detail, Kiru gains the ability to create outfits that feel personal, practical, and authentic to your style. Every destination, packing list, and travel plan benefits from a deeper understanding of the clothing you already own. Rather than encouraging unnecessary purchases, Kiru prioritizes existing garments first, helping you unlock more value from your wardrobe while promoting smarter, more sustainable travel. Every feature that follows begins with this foundation of understanding.",
   },
 ];
 
 const SLIDES = [
   {
     section: "01",
-    title: "Destination Awareness",
-    caption: "Understand local customs, traditions, and dress expectations before you travel.",
+    title: "Capture Your Wardrobe",
+    caption: "Upload clothing photos and build your digital collection with ease.",
     image: "https://images.unsplash.com/photo-1520975914412-1a2f3a1b8b2c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Destination awareness",
+    alt: "User photographing clothing items laid neatly on a bed or flat surface",
     bullets: [],
   },
   {
     section: "02",
-    title: "Respectful Recommendations",
-    caption: "Receive outfit suggestions designed to suit cultural and religious settings.",
+    title: "AI Recognition",
+    caption: "Identify categories, colors, fabrics, patterns, and seasonal suitability automatically.",
     image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80",
-    alt: "Respectful recommendations",
+    alt: "Garment image with elegant AI overlays identifying category, color, material, and season",
     bullets: [],
   },
   {
     section: "03",
-    title: "Balanced Personal Style",
-    caption: "Express yourself confidently while respecting the traditions of every destination.",
+    title: "Smart Organization",
+    caption: "Create a structured wardrobe organized by occasion, compatibility, and personal style.",
     image: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1400&q=80",
-    alt: "Balanced personal style",
+    alt: "Premium digital wardrobe interface showing clothes grouped into categories and collections",
     bullets: [],
   },
   {
     section: "04",
-    title: "Travel with Confidence",
-    caption: "Explore the world knowing you're prepared for every occasion and every culture.",
+    title: "Ready for Recommendations",
+    caption: "Transform wardrobe insights into personalized outfits, packing lists, and travel plans.",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    alt: "Travel with confidence",
+    alt: "Visual transition from wardrobe items to complete outfits and destination-ready packing plan",
     bullets: [],
   },
 ];

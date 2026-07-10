@@ -55,6 +55,73 @@ export function PageFrame({ children, navItems = [], homeHref = "/" }: PageFrame
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => {
+    if (typeof window === "undefined" || typeof IntersectionObserver === "undefined") return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const el = entry.target as HTMLElement;
+          if (entry.isIntersecting) {
+            el.classList.add("reveal-in");
+          } else {
+            el.classList.remove("reveal-in");
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+
+    const observeExisting = () => {
+      document.querySelectorAll<HTMLElement>("[data-reveal]").forEach((el) => io.observe(el));
+    };
+
+    observeExisting();
+
+    const mo = new MutationObserver((mutations) => {
+      for (const m of mutations) {
+        m.addedNodes.forEach((n) => {
+          if (!(n instanceof HTMLElement)) return;
+          if (n.matches("[data-reveal]")) io.observe(n as Element);
+          n.querySelectorAll && n.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+        });
+      }
+    });
+
+    mo.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      io.disconnect();
+      mo.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const raw = sessionStorage.getItem("kiru:backTarget");
+      if (!raw) return;
+      const parsed = JSON.parse(raw) as { path?: string; id?: string };
+      if (!parsed?.path || !parsed?.id) return;
+
+      const patch = () => {
+        document.querySelectorAll<HTMLAnchorElement>(`a[href="${parsed.path}"]`).forEach((a) => {
+          try {
+            a.setAttribute("href", `${parsed.path}#${parsed.id}`);
+            a.addEventListener("click", () => sessionStorage.removeItem("kiru:backTarget"), { once: true });
+          } catch {}
+        });
+      };
+
+      patch();
+      const mo = new MutationObserver(() => patch());
+      mo.observe(document.body, { childList: true, subtree: true });
+      return () => mo.disconnect();
+    } catch (e) {
+      /* ignore */
+    }
+  }, []);
+
   const lightOnDark = !scrolled && !open;
 
   return (
@@ -155,7 +222,7 @@ export function PageFrame({ children, navItems = [], homeHref = "/" }: PageFrame
                   { label: "Contact", href: "/contact" },
                 ]}
               />
-              <FooterCol title="Legal" items={[{ label: "Privacy Policy", href: "/contact" }]} />
+              <FooterCol title="Legal" items={[{ label: "Privacy Policy", href: "/privacy-policy" }]} />
             </div>
           </div>
 

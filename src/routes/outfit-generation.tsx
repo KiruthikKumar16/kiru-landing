@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { PageFrame } from "../components/site-shell";
 
 export const Route = createFileRoute("/outfit-generation")({
-  component: CulturalGuidance,
+  component: OutfitGeneration,
 });
 
 const NAV = [
@@ -35,7 +35,7 @@ function useReveal() {
   }, []);
 }
 
-function CulturalGuidance() {
+function OutfitGeneration() {
   useReveal();
   return (
     <PageFrame navItems={NAV} homeHref="/">
@@ -51,7 +51,7 @@ function Hero() {
     <section id="top" className="relative h-[100svh] min-h-[560px] w-full overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1505765051532-9a6a6f6ed8d9?auto=format&fit=crop&w=2400&q=85"
-        alt="People walking in a colorful market"
+        alt="AI-powered outfit generation and styling"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/80" />
@@ -59,10 +59,10 @@ function Hero() {
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 md:px-16 md:pb-32">
         <div data-reveal className="reveal max-w-3xl text-white">
           <h1 className="font-display hero-heading mt-4" style={{ fontSize: 'clamp(30px, 5vw, 70px)', lineHeight: '0.95' }}>
-            Cultural Guidance
+            Outfit Generation
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
-            Respect Every Destination.
+            Where Intelligence Meets Style.
           </p>
           <a
             href="/how-it-works"
@@ -81,56 +81,56 @@ const OVERVIEW_BLOCKS = [
   {
     title: "Overview",
     body:
-      "Travel is about discovering new places, embracing different cultures, and creating meaningful connections. Every destination has its own traditions, customs, and expectations, and the way we dress is often a reflection of that respect. Kiru's Cultural Guidance combines destination-specific insights with your wardrobe to recommend outfits that feel appropriate, comfortable, and authentic—helping you travel confidently while honoring the places you visit.",
+      "Creating the perfect outfit is about more than matching colors or selecting clothing that looks good together. Every recommendation must consider the traveler, the destination, the weather, the itinerary, and the unique wardrobe available for the journey. Outfit Generation is where all of Kiru's intelligence comes together, transforming data into personalized styling decisions that feel natural, practical, and uniquely personal. By combining wardrobe analysis, destination intelligence, weather forecasts, cultural insights, and personal preferences, Kiru creates complete outfits designed for real-world travel. Every recommendation is built around the clothes you already own, ensuring suggestions feel familiar while helping you discover new possibilities within your wardrobe.",
   },
   {
-    title: "Local Awareness",
+    title: "Styling with Purpose",
     body:
-      "What feels perfectly appropriate in one country may be considered unsuitable in another. Kiru understands regional customs, religious traditions, local etiquette, and social expectations, ensuring every recommendation reflects the culture of your destination while remaining true to your personal style.",
+      "Every outfit serves a purpose. A sightseeing day through historic streets requires different clothing than a business presentation, a mountain hike, or an evening dinner overlooking the coast. Kiru evaluates the activities planned throughout your day and creates recommendations that balance comfort, practicality, and personal style. Rather than generating outfits solely for appearance, Kiru focuses on how clothing performs in real situations. Layering options, footwear compatibility, weather suitability, and overall versatility are considered alongside aesthetics, ensuring every recommendation feels as good as it looks.",
   },
   {
-    title: "Style Without Compromise",
+    title: "Built Around Your Wardrobe",
     body:
-      "Respecting local customs doesn't mean sacrificing your individuality. Kiru carefully balances cultural considerations with your fashion preferences, creating outfits that feel natural, stylish, and appropriate for every setting. Whether visiting historic landmarks, places of worship, or modern city centers, every recommendation is designed to help you feel comfortable and confident.",
+      "The most personal outfit is the one created from clothing you already love to wear. Kiru begins every recommendation by analyzing your existing wardrobe, identifying garments that work well together while considering color harmony, fabric combinations, formality levels, and seasonal suitability. Instead of encouraging unnecessary purchases, the system prioritizes maximizing the value of your current collection. By uncovering combinations you may never have considered, Kiru helps transform familiar clothing into fresh, destination-ready outfits without requiring an entirely new wardrobe.",
   },
   {
-    title: "Travel with Confidence",
+    title: "Smarter With Every Journey",
     body:
-      "Great travel experiences begin with understanding the world around us. Kiru provides thoughtful guidance before you arrive, helping you avoid common cultural mistakes while packing clothing that's suitable for every planned activity. By combining cultural intelligence with destination insights, every journey becomes more respectful, enjoyable, and memorable.",
+      "Great style evolves over time. Every outfit you save, wear, modify, or skip provides valuable feedback that helps Kiru better understand your preferences. The system learns which recommendations resonate most with you, refining future suggestions to become increasingly aligned with your personal taste and travel habits. Over time, Kiru develops a deeper understanding of your style identity, allowing recommendations to feel less like AI-generated suggestions and more like guidance from a trusted personal stylist who understands exactly what works for you.",
   },
 ];
 
 const SLIDES = [
   {
     section: "01",
-    title: "Destination Awareness",
-    caption: "Understand local customs, traditions, and dress expectations before you travel.",
+    title: "Analyze the Occasion",
+    caption: "Understand activities, destinations, weather, and travel context before creating recommendations.",
     image: "https://images.unsplash.com/photo-1520975914412-1a2f3a1b8b2c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Destination awareness",
+    alt: "Travel itinerary with weather forecasts, destination information, and activity planning",
     bullets: [],
   },
   {
     section: "02",
-    title: "Respectful Recommendations",
-    caption: "Receive outfit suggestions designed to suit cultural and religious settings.",
+    title: "Build Complete Looks",
+    caption: "Combine clothing, footwear, and accessories into balanced travel-ready outfits.",
     image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80",
-    alt: "Respectful recommendations",
+    alt: "Premium flat-lay featuring complete outfit with coordinated clothing, shoes, and accessories",
     bullets: [],
   },
   {
     section: "03",
-    title: "Balanced Personal Style",
-    caption: "Express yourself confidently while respecting the traditions of every destination.",
+    title: "Style from Your Wardrobe",
+    caption: "Prioritize garments you already own before suggesting anything new.",
     image: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1400&q=80",
-    alt: "Balanced personal style",
+    alt: "Digital wardrobe interface transforming selected garments into multiple outfit combinations",
     bullets: [],
   },
   {
     section: "04",
-    title: "Travel with Confidence",
-    caption: "Explore the world knowing you're prepared for every occasion and every culture.",
+    title: "Learn and Improve",
+    caption: "Refine future recommendations through feedback, preferences, and travel history.",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    alt: "Travel with confidence",
+    alt: "Visualization showing AI recommendations becoming increasingly personalized across multiple trips",
     bullets: [],
   },
 ];

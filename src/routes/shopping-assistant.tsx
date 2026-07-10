@@ -113,7 +113,7 @@ const SLIDES = [
     section: "02",
     title: "Personalized Suggestions",
     caption: "Receive carefully selected recommendations that complement what you already own.",
-    image: "https://images.unsplash.com/photo-1495121605193-b116b5b09a8d?auto=format&fit=crop&w=1400&q=80",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
     alt: "Personalized suggestions",
     bullets: [],
   },

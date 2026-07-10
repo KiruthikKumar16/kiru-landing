@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { PageFrame } from "../components/site-shell";
 
 export const Route = createFileRoute("/travel-assistance")({
-  component: CulturalGuidance,
+  component: TravelAssistance,
 });
 
 const NAV = [
@@ -35,7 +35,7 @@ function useReveal() {
   }, []);
 }
 
-function CulturalGuidance() {
+function TravelAssistance() {
   useReveal();
   return (
     <PageFrame navItems={NAV} homeHref="/">
@@ -51,7 +51,7 @@ function Hero() {
     <section id="top" className="relative h-[100svh] min-h-[560px] w-full overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1505765051532-9a6a6f6ed8d9?auto=format&fit=crop&w=2400&q=85"
-        alt="People walking in a colorful market"
+        alt="Travel companion and real-time assistance"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/80" />
@@ -59,10 +59,10 @@ function Hero() {
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 md:px-16 md:pb-32">
         <div data-reveal className="reveal max-w-3xl text-white">
           <h1 className="font-display hero-heading mt-4" style={{ fontSize: 'clamp(30px, 5vw, 70px)', lineHeight: '0.95' }}>
-            Cultural Guidance
+            Travel Assistance
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
-            Respect Every Destination.
+            A Travel Companion That Never Stops Helping.
           </p>
           <a
             href="/how-it-works"
@@ -81,56 +81,56 @@ const OVERVIEW_BLOCKS = [
   {
     title: "Overview",
     body:
-      "Travel is about discovering new places, embracing different cultures, and creating meaningful connections. Every destination has its own traditions, customs, and expectations, and the way we dress is often a reflection of that respect. Kiru's Cultural Guidance combines destination-specific insights with your wardrobe to recommend outfits that feel appropriate, comfortable, and authentic—helping you travel confidently while honoring the places you visit.",
+      "Most travel planning tools stop being useful once your trip begins. Kiru is designed differently. Travel Assistance extends the Kiru experience beyond preparation, providing intelligent support throughout your journey. From changing weather conditions and itinerary updates to daily outfit guidance and packing reminders, Kiru remains by your side long after you've left home. Travel is unpredictable. Flights are delayed, weather forecasts change, plans evolve, and unexpected opportunities appear. Kiru continuously adapts to these changes, ensuring your recommendations remain relevant no matter what happens during your journey. The result is a travel experience that feels less stressful, more organized, and significantly more confident from departure to return.",
   },
   {
-    title: "Local Awareness",
+    title: "Real-Time Adaptation",
     body:
-      "What feels perfectly appropriate in one country may be considered unsuitable in another. Kiru understands regional customs, religious traditions, local etiquette, and social expectations, ensuring every recommendation reflects the culture of your destination while remaining true to your personal style.",
+      "The best travel plans are flexible. While your itinerary may begin with a clear schedule, unexpected changes often occur along the way. Kiru continuously monitors factors such as weather updates, destination conditions, and schedule adjustments, adapting recommendations whenever necessary. If rain suddenly appears in tomorrow's forecast or temperatures shift dramatically, Kiru can recommend alternative outfits from your packed wardrobe before the day begins. This ability to respond to changing conditions helps travelers stay comfortable and prepared without having to constantly rethink their plans.",
   },
   {
-    title: "Style Without Compromise",
+    title: "Daily Travel Guidance",
     body:
-      "Respecting local customs doesn't mean sacrificing your individuality. Kiru carefully balances cultural considerations with your fashion preferences, creating outfits that feel natural, stylish, and appropriate for every setting. Whether visiting historic landmarks, places of worship, or modern city centers, every recommendation is designed to help you feel comfortable and confident.",
+      "Every day of a journey presents new opportunities and challenges. Kiru simplifies decision-making by providing clear daily guidance based on your itinerary, destination, and wardrobe. Instead of wondering what to wear each morning, travelers receive outfit recommendations specifically tailored to the day's activities and conditions. Whether you're attending meetings, exploring local neighborhoods, visiting cultural landmarks, or relaxing at your destination, Kiru ensures every recommendation aligns with the experiences ahead. The goal is to reduce decision fatigue and allow travelers to focus more on the journey itself.",
   },
   {
-    title: "Travel with Confidence",
+    title: "Support Wherever You Go",
     body:
-      "Great travel experiences begin with understanding the world around us. Kiru provides thoughtful guidance before you arrive, helping you avoid common cultural mistakes while packing clothing that's suitable for every planned activity. By combining cultural intelligence with destination insights, every journey becomes more respectful, enjoyable, and memorable.",
+      "Travel Assistance is designed to provide confidence, not complexity. By bringing together weather intelligence, outfit recommendations, packing information, and destination insights into a single experience, Kiru acts as a personal travel companion throughout your trip. Rather than switching between multiple apps and sources of information, travelers receive relevant guidance in one place. From departure day to the journey home, Kiru helps ensure that every decision feels informed, every outfit feels appropriate, and every adventure feels easier to enjoy.",
   },
 ];
 
 const SLIDES = [
   {
     section: "01",
-    title: "Destination Awareness",
-    caption: "Understand local customs, traditions, and dress expectations before you travel.",
+    title: "Monitor Changing Conditions",
+    caption: "Stay ahead of weather updates, itinerary changes, and destination-specific developments.",
     image: "https://images.unsplash.com/photo-1520975914412-1a2f3a1b8b2c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Destination awareness",
+    alt: "Travel dashboard displaying live weather updates, itinerary changes, and destination alerts",
     bullets: [],
   },
   {
     section: "02",
-    title: "Respectful Recommendations",
-    caption: "Receive outfit suggestions designed to suit cultural and religious settings.",
+    title: "Daily Outfit Guidance",
+    caption: "Receive personalized recommendations tailored to each day's plans and activities.",
     image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80",
-    alt: "Respectful recommendations",
+    alt: "Smartphone showing the day's itinerary alongside a complete recommended outfit",
     bullets: [],
   },
   {
     section: "03",
-    title: "Balanced Personal Style",
-    caption: "Express yourself confidently while respecting the traditions of every destination.",
+    title: "Travel Smart",
+    caption: "Access wardrobe insights, packing information, and destination intelligence in one place.",
     image: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1400&q=80",
-    alt: "Balanced personal style",
+    alt: "Traveler using Kiru while navigating a city with contextual travel information",
     bullets: [],
   },
   {
     section: "04",
-    title: "Travel with Confidence",
-    caption: "Explore the world knowing you're prepared for every occasion and every culture.",
+    title: "Confidence Throughout the Journey",
+    caption: "Enjoy every trip knowing Kiru is continuously adapting to support your travel experience.",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    alt: "Travel with confidence",
+    alt: "Cinematic airport or destination scene showing traveler moving confidently through their journey",
     bullets: [],
   },
 ];

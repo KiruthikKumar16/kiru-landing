@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { PageFrame } from "../components/site-shell";
 
 export const Route = createFileRoute("/destination-intelligence")({
-  component: CulturalGuidance,
+  component: DestinationIntelligence,
 });
 
 const NAV = [
@@ -35,7 +35,7 @@ function useReveal() {
   }, []);
 }
 
-function CulturalGuidance() {
+function DestinationIntelligence() {
   useReveal();
   return (
     <PageFrame navItems={NAV} homeHref="/">
@@ -51,7 +51,7 @@ function Hero() {
     <section id="top" className="relative h-[100svh] min-h-[560px] w-full overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1505765051532-9a6a6f6ed8d9?auto=format&fit=crop&w=2400&q=85"
-        alt="People walking in a colorful market"
+        alt="Destination insights and travel intelligence"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/80" />
@@ -59,10 +59,10 @@ function Hero() {
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 md:px-16 md:pb-32">
         <div data-reveal className="reveal max-w-3xl text-white">
           <h1 className="font-display hero-heading mt-4" style={{ fontSize: 'clamp(30px, 5vw, 70px)', lineHeight: '0.95' }}>
-            Cultural Guidance
+            Destination Intelligence
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
-            Respect Every Destination.
+            Understanding Where You're Going.
           </p>
           <a
             href="/how-it-works"
@@ -81,56 +81,56 @@ const OVERVIEW_BLOCKS = [
   {
     title: "Overview",
     body:
-      "Travel is about discovering new places, embracing different cultures, and creating meaningful connections. Every destination has its own traditions, customs, and expectations, and the way we dress is often a reflection of that respect. Kiru's Cultural Guidance combines destination-specific insights with your wardrobe to recommend outfits that feel appropriate, comfortable, and authentic—helping you travel confidently while honoring the places you visit.",
+      "Every destination has its own character. Climate, culture, geography, seasonal conditions, and local customs all influence what makes an outfit practical and appropriate. Before Kiru recommends what to wear or what to pack, it takes the time to understand the environment you'll be traveling into. Destination Intelligence transforms location data into meaningful insights, ensuring every recommendation feels relevant to the journey ahead. By combining weather forecasts, cultural awareness, seasonal patterns, and destination-specific information, Kiru creates a complete understanding of your travel environment. The result is a smarter planning experience that helps you feel prepared before you even arrive.",
   },
   {
-    title: "Local Awareness",
+    title: "Beyond Weather Forecasts",
     body:
-      "What feels perfectly appropriate in one country may be considered unsuitable in another. Kiru understands regional customs, religious traditions, local etiquette, and social expectations, ensuring every recommendation reflects the culture of your destination while remaining true to your personal style.",
+      "Temperature is only one part of the story. Humidity, wind conditions, rainfall, UV exposure, and seasonal variations all affect how comfortable clothing feels throughout the day. Kiru analyzes these factors together, ensuring recommendations are designed for real-world conditions rather than simple temperature ranges. Whether you're exploring tropical coastlines, navigating busy urban centers, or experiencing winter landscapes, every recommendation reflects the environment you'll actually encounter. This deeper understanding helps prevent both overpacking and underpreparing.",
   },
   {
-    title: "Style Without Compromise",
+    title: "Cultural Awareness",
     body:
-      "Respecting local customs doesn't mean sacrificing your individuality. Kiru carefully balances cultural considerations with your fashion preferences, creating outfits that feel natural, stylish, and appropriate for every setting. Whether visiting historic landmarks, places of worship, or modern city centers, every recommendation is designed to help you feel comfortable and confident.",
+      "Travel is about experiencing new places while respecting the people and traditions that make them unique. Different destinations often have different expectations regarding dress, especially around religious sites, cultural landmarks, and formal settings. Kiru incorporates destination-specific cultural insights into its recommendation process, helping travelers feel confident and respectful wherever they go. Rather than limiting personal expression, Cultural Intelligence works alongside your style preferences to create recommendations that balance individuality with local expectations. The result is a travel experience that feels both authentic and considerate.",
   },
   {
-    title: "Travel with Confidence",
+    title: "Context for Every Recommendation",
     body:
-      "Great travel experiences begin with understanding the world around us. Kiru provides thoughtful guidance before you arrive, helping you avoid common cultural mistakes while packing clothing that's suitable for every planned activity. By combining cultural intelligence with destination insights, every journey becomes more respectful, enjoyable, and memorable.",
+      "Destination Intelligence doesn't work alone. It serves as one of the core systems powering every outfit recommendation, packing suggestion, and travel plan generated by Kiru. By understanding where you're going before deciding what you should wear, the platform can create recommendations that feel natural, practical, and perfectly suited to the journey. From selecting appropriate layers for changing conditions to recommending versatile clothing for multiple activities, every decision is guided by a deep understanding of your destination. This context transforms travel preparation from guesswork into confidence.",
   },
 ];
 
 const SLIDES = [
   {
     section: "01",
-    title: "Destination Awareness",
-    caption: "Understand local customs, traditions, and dress expectations before you travel.",
+    title: "Climate Analysis",
+    caption: "Understand temperatures, humidity, precipitation, and seasonal conditions before you travel.",
     image: "https://images.unsplash.com/photo-1520975914412-1a2f3a1b8b2c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Destination awareness",
+    alt: "Cinematic view of different climates with environmental data overlays",
     bullets: [],
   },
   {
     section: "02",
-    title: "Respectful Recommendations",
-    caption: "Receive outfit suggestions designed to suit cultural and religious settings.",
+    title: "Weather Intelligence",
+    caption: "Transform forecast data into practical outfit recommendations.",
     image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80",
-    alt: "Respectful recommendations",
+    alt: "Premium dashboard displaying destination forecasts connected to recommended outfits",
     bullets: [],
   },
   {
     section: "03",
-    title: "Balanced Personal Style",
-    caption: "Express yourself confidently while respecting the traditions of every destination.",
+    title: "Cultural Awareness",
+    caption: "Navigate local customs and dress expectations with confidence.",
     image: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1400&q=80",
-    alt: "Balanced personal style",
+    alt: "Travelers visiting temples, historic sites, and city centers dressed appropriately",
     bullets: [],
   },
   {
     section: "04",
-    title: "Travel with Confidence",
-    caption: "Explore the world knowing you're prepared for every occasion and every culture.",
+    title: "Destination Insights",
+    caption: "Combine climate, culture, and travel context into smarter recommendations.",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    alt: "Travel with confidence",
+    alt: "World map highlighting destinations with integrated weather, cultural, and travel intelligence",
     bullets: [],
   },
 ];

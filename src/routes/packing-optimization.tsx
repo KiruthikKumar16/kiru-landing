@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { PageFrame } from "../components/site-shell";
 
 export const Route = createFileRoute("/packing-optimization")({
-  component: CulturalGuidance,
+  component: PackingOptimization,
 });
 
 const NAV = [
@@ -35,7 +35,7 @@ function useReveal() {
   }, []);
 }
 
-function CulturalGuidance() {
+function PackingOptimization() {
   useReveal();
   return (
     <PageFrame navItems={NAV} homeHref="/">
@@ -51,7 +51,7 @@ function Hero() {
     <section id="top" className="relative h-[100svh] min-h-[560px] w-full overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1505765051532-9a6a6f6ed8d9?auto=format&fit=crop&w=2400&q=85"
-        alt="People walking in a colorful market"
+        alt="Smart packing and travel optimization"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/80" />
@@ -59,10 +59,10 @@ function Hero() {
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 md:px-16 md:pb-32">
         <div data-reveal className="reveal max-w-3xl text-white">
           <h1 className="font-display hero-heading mt-4" style={{ fontSize: 'clamp(30px, 5vw, 70px)', lineHeight: '0.95' }}>
-            Cultural Guidance
+            Packing Optimization
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
-            Respect Every Destination.
+            Bring More Possibilities, Carry Less Weight.
           </p>
           <a
             href="/how-it-works"
@@ -81,56 +81,56 @@ const OVERVIEW_BLOCKS = [
   {
     title: "Overview",
     body:
-      "Travel is about discovering new places, embracing different cultures, and creating meaningful connections. Every destination has its own traditions, customs, and expectations, and the way we dress is often a reflection of that respect. Kiru's Cultural Guidance combines destination-specific insights with your wardrobe to recommend outfits that feel appropriate, comfortable, and authentic—helping you travel confidently while honoring the places you visit.",
+      "Packing is one of the most important parts of any journey, yet it is often driven by uncertainty. Travelers frequently pack for every possible scenario, only to discover that many items remain untouched throughout the trip. Kiru's Packing Optimization system eliminates this guesswork by transforming outfit recommendations into a carefully curated packing strategy. Instead of focusing on quantity, it focuses on versatility, ensuring every item contributes meaningful value to your journey. By combining wardrobe analysis, destination intelligence, weather forecasts, and travel itineraries, Kiru determines exactly what belongs in your suitcase and what can stay at home. The result is a packing experience that feels lighter, smarter, and far more efficient, allowing you to travel confidently without sacrificing comfort or style.",
   },
   {
-    title: "Local Awareness",
+    title: "Maximizing Every Garment",
     body:
-      "What feels perfectly appropriate in one country may be considered unsuitable in another. Kiru understands regional customs, religious traditions, local etiquette, and social expectations, ensuring every recommendation reflects the culture of your destination while remaining true to your personal style.",
+      "The most effective travel wardrobes are built around versatility. Kiru analyzes how individual garments can be combined across multiple outfits, activities, and occasions, allowing a smaller number of pieces to create significantly more outfit possibilities. A single jacket may work for sightseeing, casual dinners, and airport travel, while one pair of shoes might complement several different looks. By identifying these high-value garments, Kiru reduces unnecessary duplication and helps travelers make the most of what they already own. The goal is not to pack less for the sake of packing less, but to create greater flexibility with fewer items.",
   },
   {
-    title: "Style Without Compromise",
+    title: "Optimized for Your Destination",
     body:
-      "Respecting local customs doesn't mean sacrificing your individuality. Kiru carefully balances cultural considerations with your fashion preferences, creating outfits that feel natural, stylish, and appropriate for every setting. Whether visiting historic landmarks, places of worship, or modern city centers, every recommendation is designed to help you feel comfortable and confident.",
+      "Every destination presents unique requirements. A week in Tokyo demands different essentials than a beach holiday in Bali or a winter adventure in Switzerland. Kiru evaluates climate conditions, planned activities, cultural considerations, and trip duration to determine which items deserve space in your luggage. Rather than relying on generic packing checklists, every recommendation is personalized to your specific journey. This ensures that your suitcase contains exactly what you need while avoiding unnecessary items that add weight without providing real value.",
   },
   {
     title: "Travel with Confidence",
     body:
-      "Great travel experiences begin with understanding the world around us. Kiru provides thoughtful guidance before you arrive, helping you avoid common cultural mistakes while packing clothing that's suitable for every planned activity. By combining cultural intelligence with destination insights, every journey becomes more respectful, enjoyable, and memorable.",
+      "Great packing is about preparation, not excess. Kiru generates organized packing lists that clearly outline clothing, footwear, accessories, and travel essentials required for the journey ahead. Every recommended item is connected to specific outfits and planned activities, giving travelers a clear understanding of why each piece belongs in their suitcase. The result is a more intentional approach to travel preparation. You leave home knowing that every item serves a purpose, every outfit has been planned, and every day of your journey is supported by a packing strategy built specifically for you.",
   },
 ];
 
 const SLIDES = [
   {
     section: "01",
-    title: "Destination Awareness",
-    caption: "Understand local customs, traditions, and dress expectations before you travel.",
+    title: "Analyze the Journey",
+    caption: "Evaluate destination, duration, activities, and weather before packing begins.",
     image: "https://images.unsplash.com/photo-1520975914412-1a2f3a1b8b2c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Destination awareness",
+    alt: "Premium travel dashboard displaying destination details, trip duration, weather forecasts, and planned activities",
     bullets: [],
   },
   {
     section: "02",
-    title: "Respectful Recommendations",
-    caption: "Receive outfit suggestions designed to suit cultural and religious settings.",
+    title: "Select Versatile Pieces",
+    caption: "Identify garments capable of creating multiple outfits across different occasions.",
     image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80",
-    alt: "Respectful recommendations",
+    alt: "Small collection of clothing items connected to multiple outfit combinations showcasing versatility",
     bullets: [],
   },
   {
     section: "03",
-    title: "Balanced Personal Style",
-    caption: "Express yourself confidently while respecting the traditions of every destination.",
+    title: "Optimize the Suitcase",
+    caption: "Reduce unnecessary items while maintaining maximum outfit flexibility.",
     image: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1400&q=80",
-    alt: "Balanced personal style",
+    alt: "Open suitcase being intelligently packed with selected garments",
     bullets: [],
   },
   {
     section: "04",
-    title: "Travel with Confidence",
-    caption: "Explore the world knowing you're prepared for every occasion and every culture.",
+    title: "Pack with Confidence",
+    caption: "Generate a complete travel-ready packing list built around your journey.",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    alt: "Travel with confidence",
+    alt: "Perfectly organized suitcase with passport, boarding pass, and travel essentials ready for departure",
     bullets: [],
   },
 ];

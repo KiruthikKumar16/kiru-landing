@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { PageFrame } from "../components/site-shell";
 
 export const Route = createFileRoute("/trip-planning")({
-  component: CulturalGuidance,
+  component: TripPlanning,
 });
 
 const NAV = [
@@ -35,7 +35,7 @@ function useReveal() {
   }, []);
 }
 
-function CulturalGuidance() {
+function TripPlanning() {
   useReveal();
   return (
     <PageFrame navItems={NAV} homeHref="/">
@@ -51,7 +51,7 @@ function Hero() {
     <section id="top" className="relative h-[100svh] min-h-[560px] w-full overflow-hidden">
       <img
         src="https://images.unsplash.com/photo-1505765051532-9a6a6f6ed8d9?auto=format&fit=crop&w=2400&q=85"
-        alt="People walking in a colorful market"
+        alt="Travel planning and itinerary organization"
         className="absolute inset-0 h-full w-full object-cover"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/25 to-charcoal/80" />
@@ -59,10 +59,10 @@ function Hero() {
       <div className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 md:px-16 md:pb-32">
         <div data-reveal className="reveal max-w-3xl text-white">
           <h1 className="font-display hero-heading mt-4" style={{ fontSize: 'clamp(30px, 5vw, 70px)', lineHeight: '0.95' }}>
-            Cultural Guidance
+            Trip Planning
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-white/85 md:text-xl">
-            Respect Every Destination.
+            Every Journey Starts With a Plan.
           </p>
           <a
             href="/how-it-works"
@@ -81,56 +81,56 @@ const OVERVIEW_BLOCKS = [
   {
     title: "Overview",
     body:
-      "Travel is about discovering new places, embracing different cultures, and creating meaningful connections. Every destination has its own traditions, customs, and expectations, and the way we dress is often a reflection of that respect. Kiru's Cultural Guidance combines destination-specific insights with your wardrobe to recommend outfits that feel appropriate, comfortable, and authentic—helping you travel confidently while honoring the places you visit.",
+      "No two trips are ever the same. A weekend getaway requires different preparation than a business conference, and a tropical escape demands a different wardrobe than a winter adventure. Before Kiru can recommend what to wear, it needs to understand where you're going, how long you'll be there, and what experiences await you. Trip Planning transforms simple travel details into a personalized roadmap, allowing every recommendation to be built around the journey ahead. By combining destinations, travel dates, accommodations, activities, and personal preferences, Kiru creates a complete picture of your trip. This understanding enables the platform to prepare outfits, packing lists, and travel recommendations that feel purposeful rather than generic. The result is a planning experience that helps you feel prepared long before departure day arrives.",
   },
   {
-    title: "Local Awareness",
+    title: "Designed Around Your Itinerary",
     body:
-      "What feels perfectly appropriate in one country may be considered unsuitable in another. Kiru understands regional customs, religious traditions, local etiquette, and social expectations, ensuring every recommendation reflects the culture of your destination while remaining true to your personal style.",
+      "Every activity influences what you should wear. A morning city tour, an afternoon business meeting, and an evening dinner each require different levels of comfort, practicality, and style. Kiru analyzes your itinerary to understand how each day unfolds, ensuring recommendations are tailored to the moments that matter most. Instead of creating one-size-fits-all suggestions, the system generates outfit recommendations based on your actual plans. Whether your schedule includes sightseeing, hiking, networking events, beach days, or cultural visits, every recommendation is aligned with the experiences ahead.",
   },
   {
-    title: "Style Without Compromise",
+    title: "Understanding Every Destination",
     body:
-      "Respecting local customs doesn't mean sacrificing your individuality. Kiru carefully balances cultural considerations with your fashion preferences, creating outfits that feel natural, stylish, and appropriate for every setting. Whether visiting historic landmarks, places of worship, or modern city centers, every recommendation is designed to help you feel comfortable and confident.",
+      "Where you're going is just as important as what you're doing. Kiru evaluates your destination through multiple lenses, including climate, seasonal conditions, local customs, and travel trends. These insights help the system determine which clothing pieces from your wardrobe are most suitable for the journey. From bustling metropolitan cities and coastal retreats to mountain villages and international business hubs, every destination presents unique requirements. By understanding these factors before you pack, Kiru helps eliminate uncertainty and ensures you're prepared for every environment you'll encounter.",
   },
   {
-    title: "Travel with Confidence",
+    title: "Building Smarter Journeys",
     body:
-      "Great travel experiences begin with understanding the world around us. Kiru provides thoughtful guidance before you arrive, helping you avoid common cultural mistakes while packing clothing that's suitable for every planned activity. By combining cultural intelligence with destination insights, every journey becomes more respectful, enjoyable, and memorable.",
+      "Trip Planning is more than organizing dates and locations. It serves as the foundation for every intelligent recommendation that follows. Once your journey is mapped, Kiru can begin generating daily outfits, optimizing your packing list, monitoring weather conditions, and adapting suggestions as your travel plans evolve. By connecting your itinerary with your wardrobe and personal preferences, Kiru transforms travel preparation into a seamless experience. Every recommendation becomes more relevant, every packing decision becomes easier, and every journey begins with greater confidence.",
   },
 ];
 
 const SLIDES = [
   {
     section: "01",
-    title: "Destination Awareness",
-    caption: "Understand local customs, traditions, and dress expectations before you travel.",
+    title: "Plan Your Journey",
+    caption: "Build complete travel itineraries with destinations, dates, and activities.",
     image: "https://images.unsplash.com/photo-1520975914412-1a2f3a1b8b2c?auto=format&fit=crop&w=1400&q=80",
-    alt: "Destination awareness",
+    alt: "Premium itinerary dashboard showing flights, hotels, destinations, and travel dates",
     bullets: [],
   },
   {
     section: "02",
-    title: "Respectful Recommendations",
-    caption: "Receive outfit suggestions designed to suit cultural and religious settings.",
+    title: "Day-by-Day Planning",
+    caption: "Organize every day of your trip with personalized outfit recommendations.",
     image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1400&q=80",
-    alt: "Respectful recommendations",
+    alt: "Timeline view displaying daily activities alongside recommended outfits",
     bullets: [],
   },
   {
     section: "03",
-    title: "Balanced Personal Style",
-    caption: "Express yourself confidently while respecting the traditions of every destination.",
+    title: "Destination Insights",
+    caption: "Combine travel plans with climate, culture, and local conditions.",
     image: "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1400&q=80",
-    alt: "Balanced personal style",
+    alt: "World map with highlighted destinations, weather overlays, and cultural markers",
     bullets: [],
   },
   {
     section: "04",
-    title: "Travel with Confidence",
-    caption: "Explore the world knowing you're prepared for every occasion and every culture.",
+    title: "Ready Before Departure",
+    caption: "Transform your itinerary into packing lists and travel-ready recommendations.",
     image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
-    alt: "Travel with confidence",
+    alt: "Completed travel plan transitioning into a packed suitcase and organized checklist",
     bullets: [],
   },
 ];

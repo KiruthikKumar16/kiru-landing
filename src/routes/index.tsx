@@ -50,6 +50,13 @@ const FEATURES = [
   },
 ];
 
+const FEATURE_ROUTES: Record<string, string> = {
+  wardrobe: "/wardrobe-analysis",
+  ai: "/trip-planning",
+  weather: "/ai-stylist",
+  culture: "/community-feed",
+};
+
 function useReveal() {
   useEffect(() => {
     const els = document.querySelectorAll<HTMLElement>("[data-reveal]");
@@ -199,7 +206,7 @@ function FeatureCarousel() {
           </div>
 
           <a
-            href="/features"
+            href={FEATURE_ROUTES[current.id] ?? "/features"}
             className="group inline-flex shrink-0 items-center gap-4 rounded-full border border-cream/60 bg-cream/5 px-7 py-4 text-sm font-medium text-cream backdrop-blur-md transition-all duration-500 hover:bg-cream hover:text-charcoal"
           >
             Discover more

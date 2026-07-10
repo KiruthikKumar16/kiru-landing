@@ -207,3 +207,17 @@ span[class*="group-hover:border-b-2"]::after {
 .group:hover span[class*="group-hover:border-b-2"]::after {
   transform: scaleX(1);
 }
+
+  /* Baseline button/anchor transition to ensure hover effects animate smoothly
+     without overriding existing utilities. Keeps visual changes subtle. */
+  button,
+  [role="button"],
+  a.primary,
+  a.secondary,
+  .primary,
+  .secondary {
+    transition: background-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
