@@ -20,6 +20,20 @@ dist-ssr
 .env
 .env.*
 !.env.example
+!.env.sample
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing and coverage
+coverage/
+*.lcov
+
+# Build caches
+.eslintcache
+.parcel-cache/
+.turbo/
 
 # Vercel / deployment
 .vercel/
